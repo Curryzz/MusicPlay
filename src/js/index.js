@@ -20,7 +20,7 @@ function bindClick(){
         var index = controlmanager.prev();
         $scope.trigger("play:change",index);
     })
-    $scope.on("click",".next-btn",function(){
+    $scope.on("tab",".next-btn",function(){
         var index = controlmanager.next();
         $scope.trigger("play:change",index);
     })
