@@ -16,15 +16,15 @@ function bindClick(){
         root.processor.updata(0);
     })
     //移动端click有300ms延迟
-    $scope.on("tab",".prev-btn",function(){
+    $scope.on("tap",".prev-btn",function(){
         var index = controlmanager.prev();
         $scope.trigger("play:change",index);
     })
-    $scope.on("tab",".next-btn",function(){
+    $scope.on("tap",".next-btn",function(){
         var index = controlmanager.next();
         $scope.trigger("play:change",index);
     })
-    $scope.on("tab",".play-btn",function(){
+    $scope.on("tap",".play-btn",function(){
         if(audio.status == "play"){
             audio.pause();
             root.processor.stop();
@@ -34,7 +34,7 @@ function bindClick(){
         }
         $(this).toggleClass("playing");
     })
-    $scope.on("tab",".list-btn",function(){
+    $scope.on("tap",".list-btn",function(){
         root.playList.show(controlmanager);
     })
 }
